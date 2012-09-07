@@ -157,10 +157,6 @@
     <Compile Include="Migrations\201209030247146_AddNullablePropertyToFechaSalidaInRegistroGuardia.Designer.cs">
       <DependentUpon>201209030247146_AddNullablePropertyToFechaSalidaInRegistroGuardia.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201209032041111_AddRutToAccountModels.cs" />
-    <Compile Include="Migrations\201209032041111_AddRutToAccountModels.Designer.cs">
-      <DependentUpon>201209032041111_AddRutToAccountModels.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\Cargo.cs" />

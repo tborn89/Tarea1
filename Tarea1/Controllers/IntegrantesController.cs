@@ -39,7 +39,7 @@ namespace Tarea1.Controllers
 
         //
         // GET: /Integrantes/Create
-        [Authorize(Roles = "Administrator")]
+        [Authorize(Roles = "Administrador")]
         public ActionResult Create()
         {
             ViewBag.CargoId = new SelectList(db.Cargos, "CargoId", "Titulo");
@@ -48,7 +48,7 @@ namespace Tarea1.Controllers
 
         //
         // POST: /Integrantes/Create
-        [Authorize(Roles = "Administrator")]
+        [Authorize(Roles = "Administrador")]
         [HttpPost]
         public ActionResult Create(Integrante integrante)
         {
@@ -65,7 +65,7 @@ namespace Tarea1.Controllers
 
         //
         // GET: /Integrantes/Edit/5
-        [Authorize(Roles = "Administrator")]
+        [Authorize(Roles = "Administrador")]
         public ActionResult Edit(int id = 0)
         {
             Integrante integrante = db.Integrantes.Find(id);
@@ -79,7 +79,7 @@ namespace Tarea1.Controllers
 
         //
         // POST: /Integrantes/Edit/5
-        [Authorize(Roles = "Administrator")]
+        [Authorize(Roles = "Administrador")]
         [HttpPost]
         public ActionResult Edit(Integrante integrante)
         {
@@ -95,7 +95,7 @@ namespace Tarea1.Controllers
 
         //
         // GET: /Integrantes/Delete/5
-        [Authorize(Roles = "Administrator")]
+        [Authorize(Roles = "Administrador")]
         public ActionResult Delete(int id = 0)
         {
             Integrante integrante = db.Integrantes.Find(id);
@@ -108,7 +108,7 @@ namespace Tarea1.Controllers
 
         //
         // POST: /Integrantes/Delete/5
-        [Authorize(Roles = "Administrator")]
+        [Authorize(Roles = "Administrador")]
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {
