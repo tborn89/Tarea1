@@ -1,0 +1,12 @@
+﻿@{
+    ViewBag.Title = "Actual";
+}
+
+<h2>Voluntarios actualmente en la Guardia</h2>
+<h3>Está a cargo el @ViewBag.IntegranteQueManda.Cargo.Titulo @ViewBag.IntegranteQueManda.NombreCompleto</h3>
+<ul>
+@foreach (var voluntario in ViewBag.Voluntarios)
+{
+    <li>@voluntario.NombreCompleto (@voluntario.Cargo.Titulo)</li>    
+}
+</ul>

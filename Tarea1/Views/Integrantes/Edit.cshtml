@@ -1,0 +1,61 @@
+﻿@model Tarea1.Models.Integrante
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Integrante</legend>
+
+        @Html.HiddenFor(model => model.IntegranteId)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Nombre)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Nombre)
+            @Html.ValidationMessageFor(model => model.Nombre)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Apellido)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Apellido)
+            @Html.ValidationMessageFor(model => model.Apellido)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Rut)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Rut)
+            @Html.ValidationMessageFor(model => model.Rut)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CargoId, "Cargo")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("CargoId", String.Empty)
+            @Html.ValidationMessageFor(model => model.CargoId)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

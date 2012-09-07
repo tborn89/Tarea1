@@ -1,0 +1,29 @@
+﻿@model Tarea1.Models.Cargo
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Cargo</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Titulo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Titulo)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Prioridad)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Prioridad)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.CargoId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

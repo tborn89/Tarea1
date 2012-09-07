@@ -1,0 +1,45 @@
+﻿@model Tarea1.Models.Integrante
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<h3>Total dias de guardia: @ViewBag.DiasDeGuardia</h3>
+
+<fieldset>
+    <legend>Integrante</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Nombre)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Nombre)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Apellido)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Apellido)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Rut)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Rut)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Cargo.Titulo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Cargo.Titulo)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.IntegranteId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

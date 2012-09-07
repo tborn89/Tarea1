@@ -1,0 +1,51 @@
+﻿@model Tarea1.Models.RegistroGuardia
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>RegistroGuardia</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.IntegranteId, "Integrante")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("IntegranteId", String.Empty)
+            @Html.ValidationMessageFor(model => model.IntegranteId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FechaIngreso)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FechaIngreso)
+            @Html.ValidationMessageFor(model => model.FechaIngreso)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FechaSalida)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FechaSalida)
+            @Html.ValidationMessageFor(model => model.FechaSalida)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

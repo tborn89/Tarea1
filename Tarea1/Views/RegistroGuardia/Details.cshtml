@@ -1,0 +1,36 @@
+﻿@model Tarea1.Models.RegistroGuardia
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>RegistroGuardia</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Integrante.Nombre)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Integrante.Nombre)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FechaIngreso)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FechaIngreso)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FechaSalida)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FechaSalida)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.RegistroGuardiaId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
